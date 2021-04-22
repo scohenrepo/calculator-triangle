@@ -1,0 +1,15 @@
+<p>Find out if what kind of triangle you have! Must enter 3 values.</p>
+
+<form (ngSubmit)="showResult()" #myForm="ngForm" >
+    <div class="form-group mx-sm-2 mb-2">
+        <input type="number" #one  [(ngModel)]="sizeOne" ng-minlength="1" name="one" required>
+        <input type="number" #two   [(ngModel)]="sizeTwo" ng-minlength="1" name="two" required>
+        <input type="number" #three   [(ngModel)]="sizeThree" ng-minlength="1" name="three" required>
+    </div>
+    <button type="submit" [disabled]="!myForm.form.valid" class="btn btn-success mx-sm-1 mb-2" >Find out!</button>
+    
+    
+   <br/><br/>
+   <h4>Your triangle is a(n) {{typeOfTriangle}}</h4>
+
+</form>

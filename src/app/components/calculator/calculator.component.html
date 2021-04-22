@@ -1,0 +1,71 @@
+
+<div class="container">
+    <div class="form-inline">
+        <div class="form-group mx-sm-1 mb-2">
+             
+        <div class="inputType">{{zero}}{{ans}}</div>
+        </div>
+        <button class="btn btn-primary mx-sm-1 mb-2" (click)="showResult()">Enter</button>
+        <button class="btn btn-warning mb-2" (click)="reset()">Reset</button>
+        
+                        <br/><br/>
+
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <button class="fw-bold" (click)="appendDigit('7')">7</button>
+        </div>
+        <div class="col-md-3">
+            <button class="fw-bold" (click)="appendDigit('8')">8</button>
+        </div>
+        <div class="col-md-3">
+            <button class="fw-bold" (click)="appendDigit('9')">9</button>
+        </div>
+        <div class="col-md-3">
+            <button class="fw-bold" (click)="delete()">Delete</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <button class="fw-bold" (click)="appendDigit('4')">4</button>
+        </div>
+        <div class="col-md-3">
+            <button class="fw-bold" (click)="appendDigit('5')">5</button>
+        </div>
+        <div class="col-md-3" >
+            <button class="fw-bold" (click)="appendDigit('6')">6</button>
+        </div>
+        <div class="col-md-3">
+            <button class="fw-bold" (click)="divide()" [disabled]="chosenOperation">/</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <button class="fw-bold" (click)="appendDigit('1')">1</button>
+        </div>
+        <div class="col-md-3">
+            <button class="fw-bold" (click)="appendDigit('2')">2</button>
+        </div>
+        <div class="col-md-3">
+            <button class="fw-bold" (click)="appendDigit('3')">3</button>
+        </div>
+        <div class="col-md-3">
+            <button class="fw-bold" (click)="multiply()" [disabled]="chosenOperation">*</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <button class="fw-bold" (click)="appendDigit('0')">0</button>
+        </div>
+        <div class="col-md-3">
+            <button class="fw-bold" (click)="appendDigit('.')">.</button>
+        </div>
+        <div class="col-md-3">
+            <button class="fw-bold" (click)="substract()" [disabled]="chosenOperation">-</button>
+        </div>
+        <div class="col-md-3">
+            <button class="fw-bold" (click)="add()" [disabled]="chosenOperation">+</button>
+        </div>
+    </div>
+
+</div>
